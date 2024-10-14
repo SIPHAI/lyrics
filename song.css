@@ -1,0 +1,56 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+.rotating-text-wrapper {
+
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     position: relative;
+     background: #000;
+   }
+   
+   .rotating-text-wrapper h2 {
+     font-size: 2.5em;
+     margin: 0;
+     padding: 0.3em;
+     color: #fff;
+     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+     opacity: 0;
+     position: absolute;
+     transition: opacity 1s ease, transform 0.5s ease;
+     transform: translateY(20px); /* Initial state for smooth transition */
+   }
+   
+   .rotating-text-wrapper h2.active {
+     opacity: 1;
+     transform: translateY(0); /* Brings the text up into view */
+   }
+   
+   .rotating-text-wrapper h2:not(.active) {
+     opacity: 0;
+     transform: translateY(20px); /* Moves text slightly down when inactive */
+   }
+   
+   /* .rotating-text-wrapper h2:nth-child(1) {
+     background-color: lightseagreen;
+   }
+   
+   .rotating-text-wrapper h2:nth-child(2) {
+     background-color: tomato;
+   }
+   
+   .rotating-text-wrapper h2:nth-child(3) {
+     background-color: cornflowerblue;
+   } */
+   
+   @media screen and (max-width: 576px) {
+     .rotating-text-wrapper {
+       font-size: 0.7rem;
+     }
+   }
