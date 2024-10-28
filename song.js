@@ -14,3 +14,4 @@ document.addEventListener('keydown', function(event) {
 
 // Initialize the first text to be visible
 texts[currentIndex].classList.add('active');
+
